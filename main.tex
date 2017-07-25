@@ -1,0 +1,145 @@
+\documentclass[12pt,french,english]{report} % main lang last
+%\documentclass[12pt,english, spanish, french]{thesis}
+%
+% notes: 
+% - Place figures in the /fig folder
+%
+% Change log:
+% - (07/03/2017) switched from natlib to biblatex
+% - (04/04/2017) added \DeclareMathOperator{\sinc}{sinc}
+% - (10/04/2017) omitted bibtex fields: url, issn, doi (see line \usepackage[...]{biblatex})
+
+% Some page styling:
+%\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath} % to align multline equations
+%\usepackage[export]{adjustbox}
+\usepackage{amssymb} % xtra math symbols, like \triangleq
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Interlineado
+%\usepackage{setspace}
+%\setstretch{1.5}
+
+% Bibtex
+%\usepackage{cite} % use cite with natbib but not with biblatex
+%\usepackage{natbib}
+\usepackage[backend=bibtex,style=alphabetic,url=false,isbn=false,doi=false]{biblatex}
+%\usepackage[style=alphabetic,natbib=true]{biblatex}
+\bibliography{../mybib} % put here in preamble when using biblatex
+% temporary fix for biblatex bug in MacBook
+\makeatletter
+\def\blx@maxline{77}
+\makeatother
+
+%\usepackage{times}
+%\usepackage{amssymb}
+\usepackage{float}
+%\usepackage{color}
+\usepackage{graphicx}
+%\usepackage{eso-pic}
+%\usepackage{multicol}
+\usepackage{enumerate} % custom lists
+%\usepackage{url}
+%\usepackage{soul}
+%\usepackage{fancyhdr}
+% for working with eps
+\usepackage{epstopdf} 
+\usepackage{gensymb} % for the degree symbol °
+\usepackage{tikz}
+%\usetikzlibrary{arrows,intersections}
+%\usetikzlibrary{shapes,arrows,snakes}
+%\usepackage{pgf-umlcd}
+%%\usepackage{courier}
+%\usepackage{listings}
+\usepackage{color} % color text
+\usepackage{titlesec} % to change the way \paragraph formats the titles
+\usepackage{minitoc} % for table of contents at the beginning of chapter
+\usepackage{quotchap} % for chapter openning quotes
+\usepackage{textcomp} % for copyright symbol
+\usepackage{mathtools} % for matrices
+
+% bold vector notation % usage: $\vec{v} =  ...$
+\renewcommand{\vec}[1]{\mathbf{#1}}  
+
+% Define a path for the fig folder
+% nota: imges must be in the same folder or subfolders of this file, if not pdf2latex will complain
+% ---------------------- %
+\newcommand{\figpath}{./fig}
+
+% Bibligraphy path
+% ---------------------- %
+\newcommand{\bibpath}{..}
+
+% row counting for tables
+% ---------------------- %
+\newcounter{magicrownumbers}
+\newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
+
+% numbering for paragraphs (to add extra level section)
+% ---------------------- %
+\setcounter{secnumdepth}{3}
+% \titleformat{\paragraph}
+% {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+% \titlespacing*{\paragraph}
+% {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\DeclareMathOperator{\sinc}{sinc}
+
+%Fin Preambulo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Start content
+% -------------------------------------------------------------------------------------- %
+\begin{document}
+
+% ---------------------- %
+% Title
+% ---------------------- %
+\title{The Legacy Project}
+\author{
+  Michel, Nicolas\\
+  \texttt{nicolas.michel@legacy.network}
+  \and
+  Almonacid Zamora, Vicente\\
+  \texttt{vicente.almonacid@legacy.network}
+}
+\date{\today}
+\maketitle
+
+% \chapter*{Acknowledgements}
+% I want to thank...
+
+\tableofcontents
+
+% \listoffigures
+
+% ---------------------- %
+% Main Content
+% ---------------------- %
+
+\include{chapters/exec_summ}
+
+% ---------------------- %
+% Bibliography
+% ---------------------- %
+%
+% 1. using natbib
+%\bibliographystyle{plain}
+%\bibliography{\bibpath/mybib}
+%
+% 2. uing biblatex
+%\printbibliography
+
+% ---------------------- %
+% Appendix
+% ---------------------- %
+%\appendix
+		
+\end{document}}
