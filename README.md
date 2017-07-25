@@ -1,6 +1,6 @@
-# Legacy Whitepaper Readme
+# Legacy Whitepaper
 
-Legacy is a smartc-contract oriented will and testament based on the ethereum blockchain.
+Legacy is a smart-contract oriented will and testament based on the ethereum blockchain.
 
 ## Project
 
