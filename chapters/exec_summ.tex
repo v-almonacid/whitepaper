@@ -1,7 +1,76 @@
 \chapter{Executive Summary} % (fold)
 \label{cha:executive_summary}
 
-Wills, or testaments, have a history that goes back to Ancient Greece. While their utility and legal implications contrast among different cultures and ages, their underlying mechanisms are basically the same. As we move toward a digital economy and society, analog forms of value--including both sentimental and monetary--are being replaced, stored and transmitted in digital formats. In this way, printed documents, books, pictures--and even money--are just a few examples of things that are now regularly handled digitally. In this context, distributing our valuable digital possessions after we pass away is not something that can be easily achieved through the traditional system consisting of a simple will and an executor. In particular, this approach usually requires the intervention of several trusted third parties (an executor, a lawyer and eventually a public notary) and does not guarantee security, reliability nor privacy--the latter being especially important when it comes to transferring personal data to which we attribute profound meaning. Furthermore, with the introduction of blockchain platforms and smart contracts, on the one hand, and the imminent mainstream adoption of the Internet of Things (IoT), on the other, we expect to see the emergence of a novel concept of property known as \textit{smart property}; that is, a type of property that can be traded and transferred without the need for intermediaries. Just as cryptocurrencies, smart property will require a different technological solution--as well as a novel legal framework--in order to be securely transferred according to a decedent will.
-This paper introduces Legacy, a blockchain-based service that aims at becoming the first \textit{smart will}. At a first stage, Legacy will focus on providing a service allowing you to distribute what we refer to as \textit{memories}; \textit{i.e.}, digital items such as images, video recordings, songs, manuscripts or other forms of digital data that captures essential life experiences or holds significant sentimental value. In the long term, as smart property becomes a reality and law embraces the blockchain revolution, Legacy aims at positioning as the \textit{de facto} smart will solution, progressively eliminating the need for trusted third parties and ensuring key attributes such as security, privacy and long-term operation.
+Wills, or testaments, have a history that goes back to Ancient Greece. While their utility and legal implications contrast among different cultures and ages, their underlying mechanisms are basically the same. As we move toward a digital economy and society, analog forms of value---including both sentimental and monetary--are being replaced, stored and transmitted in digital formats. In this way, printed documents, books, pictures---and even money--are just a few examples of things that are now regularly handled digitally. In this context, distributing our valuable digital possessions after we pass away is not something that can be easily achieved through the traditional system consisting of a simple Will and an executor. In particular, this approach usually requires the intervention of several trusted third parties (an executor, a lawyer and eventually a public notary) and does not guarantee security, reliability nor privacy--the latter being especially important when it comes to transferring personal data to which we attribute profound meaning. Furthermore, with the introduction of blockchain platforms and smart contracts, on the one hand, and the imminent mainstream adoption of the Internet of Things (IoT), on the other, we expect to see the emergence of a novel concept of property known as \textit{smart property}; that is, a type of property that can be traded and transferred without the need for intermediaries. Just as cryptocurrencies, smart property will require a different technological solution--as well as a novel legal framework--in order to be securely transferred according to a decedent last Will.
+This paper introduces Legacy, a blockchain-based service that aims at becoming the first \textit{smart Will}. At a first stage, Legacy will focus on providing a service allowing you to distribute what we refer to as \textit{memories}; \textit{i.e.}, digital items such as images, video recordings, songs, manuscripts or other forms of digital data that captures essential life experiences or holds significant sentimental value. In the long term, as smart property becomes a reality and law embraces the blockchain revolution, Legacy aims at positioning as the \textit{de facto} smart will solution, progressively eliminating the need for trusted third parties and ensuring key attributes such as security, privacy and long-term operation.
+
+% ---------------------------------------------------------------------------------------------------------------- %
+% Problem Statement
+% ---------------------------------------------------------------------------------------------------------------- %
+\section{Problem Statement} % (fold)
+\label{sec:problem_statement}
+The traditional process of transferring property---whether it be in the form of real estate, money or ordinary valuable objects---through a will and testament involves several issues, which vary depending on the particular legal framework. 
+
+In general, the process depends entirely on an executor, who is in charge of administrating the legacy and is appointed by the testator (i.e., the person who writes the will). An executor should therefore be someone in whom the testator absolutely trust.  Writing a conventional will might also require the intervention of additional  intermediaries, such as a lawyer and a notary. In many cases, however, these are not legally indispensable, which suggests that the process can be systematized in order to be easily self-completed by the testators. The OpenLaw protocol recently proposed by Consensys [cite_required] is an interesting innovation on this subject. 
+
+Wills are typically written in the form of simple, ordinary documents, and hence can get lost or destroyed. Since they must be easily accessible by the executors when the moment arrives, wills are usually not stored securely. This also compromises the integrity and confidentiality of the content.
+  
+Conventional wills are in general limited to the distribution of monetary valuable possessions and are not suitable for managing personal digital data. Nowadays, most of our important life experiences and memories are captured in emails, digital images, videos,  and other forms of digital items. All of these are also part of our legacy and require  and, naturally, conventional wills are not meant to this purpose. While software solutions addressing this problem exist, these are in general based on centralized solutions that provide limited guarantees in terms of reliability and long-term operation.
+
+A conventional will is defined and executed once. Making further modifications after it has been signed is in general not possible and requires rewriting the entire document. A will is also inherently static in the sense that it cannot be automatically adapted according to changes in future conditions or unpredictable events. In addition, the process of executing a will may take significant time. Much of the process can be accelerated and systematized by taking advantage of simple software solutions. 
+
+Finally, there is the problem of securely transferring cryptocurrencies. Currently, cryptocurrencies are stored in wallets that can be accessed through a private key or password-protected encrypted files. If an individual holding cryptocurrencies dies without having communicated his/her wallet credentials to third persons, then the entire wallet balances are irrevocably lost. 
+
+% section problem_statement (end)
+
+% ---------------------------------------------------------------------------------------------------------------- %
+% Goals
+% ---------------------------------------------------------------------------------------------------------------- %
+\section{Goals} % (fold)
+\label{sec:goals}
+
+\subsubsection*{Simplifying the process of transferring your digital possessions after your death} % (fold)
+\label{ssub:simplifying_the_process_of_transferring_your_digital_possessions_after_your_death}
+Legacy is an easy-to-use application that aims at removing the burden of dealing with multiple services. Exploiting the advantages blockchain-based smart contracts, Legacy allows to transfer digital data without relying on an trusted intermediary.  
+Through the Legacy web interface or mobile application, a user can easily select who---and under which conditions---will receive what when the time come.
+% subsubsection simplifying_the_process_of_transferring_your_digital_possessions_after_your_death (end)
+
+\subsubsection*{A service that ensures security, reliability, privacy and long-term operation} % (fold)
+\label{ssub:a_service_that_ensures_security_reliability_privacy_and_long_term_operation}
+Today, anyone can host files on the cloud and call it secure. Legacy goes beyond and above, with public, auditable code. Hosting code and critical data in the Ethereum Blockchain also ensures its availability in the future. In addition, a system design approach oriented towards decentralization allow us to increase the service reliability.
+We are committed to building a system that is provably honest---and one that will outlive both us and our company.
+% subsubsection a_service_that_ensures_security_reliability_privacy_and_long_term_operation (end)
+
+\subsubsection*{Reducing the need for trusted third parties for creating and executing a will} % (fold)
+\label{ssub:reducing_the_need_for_trusted_third_parties_for_creating_and_executing_a_will}
+The need for trusted third parties for transferring property usually has more to do with legal issues rather than technical requirements. In this context, advanced algorithms combined with smart contracts allow to simplify the process.
+% subsubsection reducing_the_need_for_trusted_third_parties_for_creating_and_executing_a_will (end)
+
+\subsubsection*{An enhanced, smart will allowing to transfer cryptocurrency and smart property} % (fold)
+\label{ssub:_an_enhanced_smart_will_allowing_to_transfer_cryptocurrency_and_smart_property_}
+Our ultimate goal is to integrate a wide variety of transferable items, including cryptocurrencies and other types of virtual assets, as well as smart property. This the long-term vision of the Legacy project and represents the main problems that we aim to tackle. This goal, however, involves a number of technical challenges and legal issues that need to be overcome---as we discuss in more detail later on.
+% subsubsection _an_enhanced_smart_will_allowing_to_transfer_cryptocurrency_and_smart_property_ (end)
+
+% section goals (end)
+
+% ---------------------------------------------------------------------------------------------------------------- %
+% Overview of Legacy and Use Cases
+% ---------------------------------------------------------------------------------------------------------------- %
+\section{Overview of Legacy and Use Cases} % (fold)
+\label{sec:overview_of_legacy_and_use_cases}
+In the mid term, the Legacy project is divided into two main phases, as detailed in Section <roadmap_section>: Legacy I and Legacy II---the main differences between both being in the underlying software architecture.  Further releases including enhanced capabilities---such as the ability to manage smart property---are also considered over the medium and long terms, as technological and legal issues are overcome. This document focuses mainly on Legacy I and II, which we will refer to simply as Legacy in the following. 
+
+Initially, Legacy will allow to securely transfer any form of digital data such as pictures, videos, audio files and text documents. Files will be stored using a decentralized, encrypted system. Each individual file belonging to a given user represents a memory. Memories can be bundled into capsules that a user may schedule for transfer to one or more recipients upon death. A capsule can be programmed in many different ways, forming a smart will. For instance, a user might want to send an email to his/her children once they turn eighteen years old or share with them special memories for important days of their lives such as graduation or marriage. In this way, a user can easily specify which are the events and conditions that trigger a capsule transfer.
+
+An important function of the Legacy application is to determine precisely and timely whether the user is alive or not---ideally without involving interaction with family members. This is verified periodically through a mechanism called Proof of Life (PoL). The PoL engine uses different criteria in order to take a reliable decision, and its operation can be completely customizable by the user. For instance, PoL can be based on social network activity patterns---which has the advantage of not requiring explicit signalling from the user---or on periodic email notifications asking the user to simply click on a link. Different PoL mechanisms can be combined in order to achieve a desired level of reliability and user experience. Once the PoL engine determines that the user has died, the capsules are scheduled for further distribution.
+
+\subsection{Cryptocurrencies and Smart-property: The Legacy Vision} % (fold)
+\label{sub:cryptocurrencies_and_smart_property_the_legacy_vision}
+With the introduction of blockchain technologies and smart contracts, as well as the global deployment of the IoT, the concept of smart property will rapidly become a reality.  At this stage, the challenges are no longer technological, but legal. The same applies for cryptocurrencies. Legacy will study applicable legislation in our customers countries, and spearhead the transition to smart property by providing a clear reference framework. 
+% subsection cryptocurrencies_and_smart_property_the_legacy_vision (end)
+
+% section overview_of_legacy_and_use_cases (end)
+
+
 
 % chapter executive_summary (end)
