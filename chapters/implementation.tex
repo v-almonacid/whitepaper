@@ -3,7 +3,7 @@
 
 This chapter focuses on software architecture and implementation aspects. We identify key attributes that Legacy must exhibit and describe the adopted approaches to tackle them. Overall, Legacy’s underlying implementation aims at building a robust application that inspires trust for both users and investors.
 
-Legacy’s core functionalities reside in a blockchain platform (more specifically, the Ethereum blockchain <cite_required>). This aspect is perhaps the main competitive advantage of Legacy with respect to similar solutions, and also enables additional functionalities that have not been addressed by other services. Before introducing Legacy’s general architecture, the reasons why a blockchain platform has been adopted are briefly discussed next.
+Legacy’s core functionalities reside in a blockchain platform (more specifically, the Ethereum blockchain). This aspect is perhaps the main competitive advantage of Legacy with respect to similar solutions, and also enables additional functionalities that have not been addressed by other services. Before introducing Legacy’s general architecture, the reasons why a blockchain platform has been adopted are briefly discussed next.
 
 
 \section{Why Blockchain?} % (fold)
@@ -26,9 +26,17 @@ Legacy’s architecture is composed by several entities: the blockchain platform
 \subsection{Legacy v1.0 (Memoirs): A Hybrid Architecture} % (fold)
 \label{sub:legacy_v1_0_memoirs_a_hybrid_architecture}
 Legacy v1.0, named Memoirs, will be the first stable release of the Legacy Project. This initial version enables secure distribution of memories in the form of digital data, such as pictures, videos, text documents, etc. Since blockchain technologies supporting privacy requirements are still evolving, Legacy Memoirs is based on a hybrid architecture, making use of smart contracts but keeping sensitive data on more traditional technologies.
-A high-level representation of Legacy Memoirs’ architecture is given in Figure <legacy_memoirs>. Legacy’s own infrastructure and frontends are shown in blue, third-party services in green and the blockchain in red. There are two main frontends: a web application, which is the main interface between the user and the core infrastructure, and a mobile application, which has more limited capabilities and is mainly used for providing PoL data. Legacy’s backend plays different roles. First, it creates smart contract instances after a user initiates the service and commits a capsule. Second, once a user smart contract is uploaded to the blockchain, the backend is in charge of running periodic calls in order to execute the code. And third, it also gathers PoL data from external web services and plugins. The user smart contract implements the PoL algorithm that determines if a user is still alive or not, schedules subsequent calls from the backend and triggers the distribution of capsules once the PoL engine determines that the user has died. 
+A high-level representation of Legacy Memoirs’ architecture is given in Figure \ref{fig:leg_v1_arch}. Legacy’s own infrastructure and frontends are shown in blue, third-party services in green and the blockchain in red. There are two main frontends: a web application, which is the main interface between the user and the core infrastructure, and a mobile application, which has more limited capabilities and is mainly used for providing PoL data. Legacy’s backend plays different roles. First, it creates smart contract instances after a user initiates the service and commits a capsule. Second, once a user smart contract is uploaded to the blockchain, the backend is in charge of running periodic calls in order to execute the code. And third, it also gathers PoL data from external web services and plugins. The user smart contract implements the PoL algorithm that determines if a user is still alive or not, schedules subsequent calls from the backend and triggers the distribution of capsules once the PoL engine determines that the user has died. 
 Memories and capsules will be initially stored using third-party services. Further details are given in Section <storage>.
 To allow our smart contracts to query the outside world (for instance, for PoL signalling), an Oracle interface is required. Legacy Memoirs will employ a third-party, Ethereum-compatible Oracle (such us Oraclize).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.3]{fig/architecture_v02_hybrid}
+  \caption{Legacy Mémoires architecture.}
+  \label{fig:leg_v1_arch}
+\end{figure} 
+
 % subsection legacy_v1_0_memoirs_a_hybrid_architecture (end)
 
 \subsection{Legacy v2.0 (Heritage): Towards a Fully Decentralized Architecture} % (fold)
@@ -84,7 +92,7 @@ Email notifications: users can signal activity by clicking on a link sent period
 Official data: Some governments offer official obituary databases that can be freely consulted through an API.  
 Human-assisted mechanisms: as an additional PoL layer, Legacy employees may directly contact a person previously designated by the user.
 
-The different PoL signalling channels are shown in Figure <legacy_memoirs_arch>. Using these various input data sources, a weighted algorithm determines the user state (alive/dead) with a given periodicity. The main input parameters, plugins and periodicity are fully configurable by the user, and can be adapted on-the-fly. The options available for PoL also vary according to the user’s subscription package because using additional mechanisms also results in increased transactions between the blockchain and external services, which in turn involves additional costs. 
+The different PoL signalling channels are shown in Figure \ref{fig:leg_v1_arch}. Using these various input data sources, a weighted algorithm determines the user state (alive/dead) with a given periodicity. The main input parameters, plugins and periodicity are fully configurable by the user, and can be adapted on-the-fly. The options available for PoL also vary according to the user’s subscription package because using additional mechanisms also results in increased transactions between the blockchain and external services, which in turn involves additional costs. 
 % subsection proof_of_life (end)
 
 \subsection{Security} % (fold)
@@ -111,7 +119,7 @@ Clearly, Legacy must provide guarantees of sustainability in time. In many cases
 
 From the point of view of the application architecture, the code must be able to evolve in time and be easily adaptable according to major technological changes. This is another reason why dependence on specific third-party services must be minimized, in particular on those who are based on centralized architectures. Instead, core functions of Legacy should be flexible and provide support for alternative solutions. In the long term, Legacy expects to be agnostic regarding its main dependencies (i.e. blockchain platform, storage and Oracle interface). This would allow, for instance, to migrate user’s smart contracts from one blockchain to another, in the eventuality that the former shows critical signs of scalability or stability issues. A blockchain-agnostic model also offers the possibility of setting up capsules into two parallel blockchains, if this option appears to be economically viable.    
 
-On the other hand, it is desirable to minimize the dependence on the Legacy organization itself. Indeed, users expect that their capsules will be effectively distributed even in the eventuality that the Legacy organization is dissolved. As mentioned in Section <section_legacy_foundation>, this will be one of the fundamental roles of the Legacy Foundation. Among the measures foreseen in this case, Legacy is committed to publishing an open source application that allows users to keep paying operational costs (i.e., fees required for blockchain transactions and storage) in order to ensure continuous operation. The Legacy foundation will be in charge of maintaining the code and guaranteeing its functionality.
+On the other hand, it is desirable to minimize the dependence on the Legacy organization itself. Indeed, users expect that their capsules will be effectively distributed even in the eventuality that the Legacy organization is dissolved. As mentioned in Section \ref{sec:the_legacy_foundation}, this will be one of the fundamental roles of the Legacy Foundation. Among the measures foreseen in this case, Legacy is committed to publishing an open source application that allows users to keep paying operational costs (i.e., fees required for blockchain transactions and storage) in order to ensure continuous operation. The Legacy foundation will be in charge of maintaining the code and guaranteeing its functionality.
 % subsection long_term_service_availability (end)
 
 % section technical_aspects (end)

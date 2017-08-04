@@ -24,11 +24,12 @@
 %\usepackage{cite} % use cite with natbib but not with biblatex
 %\usepackage{natbib}
 \usepackage[style=alphabetic,natbib=true]{biblatex}
-\bibliography{../mybib} % put here in preamble when using biblatex
+\bibliography{./refs} % put here in preamble when using biblatex
 
 \usepackage{float}
 %\usepackage{color}
 \usepackage{graphicx}
+\usepackage{rotating}
 %\usepackage{eso-pic}
 %\usepackage{multicol}
 \usepackage{enumerate} % custom lists
@@ -90,6 +91,12 @@
 % ---------------------- %
 
 \include{chapters/exec_summ}
+\include{chapters/business_model}
+\include{chapters/implementation}
+\include{chapters/roadmap}
+\include{chapters/legal}
+\include{chapters/crowdfunding}
+\include{chapters/team}
 
 % ---------------------- %
 % Bibliography
@@ -97,10 +104,10 @@
 %
 % 1. using natbib
 %\bibliographystyle{plain}
-%\bibliography{\bibpath/mybib}
+%\bibliography{\bibpath/refs}
 %
 % 2. uing biblatex
-%\printbibliography
+\printbibliography
 
 % ---------------------- %
 % Appendix
