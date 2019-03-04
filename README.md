@@ -1,1 +1,1 @@
-This repository has been moved to https://raw.githubusercontent.com/legacynetwork/whitepaper
+This repository has been moved to https://github.com/legacynetwork/whitepaper
